@@ -1,0 +1,12 @@
+git remote add ansible git@github.com:ahmedfathy75/myansible.git
+git branch --set-upstream-to=ansible/master master
+git push --set-upstream ansible mater
+git pull --allow-unrelated-histories
+
+
+#To Run Role
+ansible-galaxy install geerlingguy.jenkins
+
+
+ansible-playbook jenkins main.yml --check    #Dry-Run
+ansible-playbook jenkins main.yml
